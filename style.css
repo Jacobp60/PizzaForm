@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+    color: red;
+}
+body{
+    background-image: url("images/pexels-max-avans-5056623.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0,0,0,0.01);
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+.container{
+
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    border: solid white;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    color: red;
+}
+header{
+    background-color: rgba(0,0,0,0.5);
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.order{
+    color: white;
+}
+footer{
+    text-align: center;
+    font-style: italic;
+    font-size: small;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: rgba(0,0,0,0.5);
+}
+#content-wrap {
+    padding-bottom: 2.5rem;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}

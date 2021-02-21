@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Form</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<header>
+    <h1>Luigi's Pizzeria</h1>
+    <br>
+</header>
+<body id="page">
+<div class="container">
+    <nav>
+        <ul id="tabs" class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#content1" data-value="1">Build Your Pizza</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#content2" data-value="2">Personal Information</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="summary" href="#content3" data-value="3">Summary</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="tab-content">
+        <div id="content1" class="tab-pane active">
+            <h2>Pizza Size</h2>
+            <form>
+                <input type="radio" name="size" id="smallPizza" data-prices="7">
+                <label for="smallPizza">Small Pizza</label>
+
+                <br>
+
+                <input type="radio" name="size" id="medPizza" data-prices="9">
+                <label for="medPizza">Medium Pizza</label>
+
+                <br>
+
+
+                <input type="radio" name="size" id="larPizza" data-prices="12">
+                <label for="larPizza">Large Pizza</label>
+
+
+            </form>
+
+            <h2>Crust</h2>
+            <form>
+                <input type="radio" name="crust" id="thin" >
+                <label for="thin">Thin Crust</label>
+
+                <br>
+
+                <input type="radio" name="crust" id="pan" >
+                <label for="pan">Pan Crust</label>
+
+                <br>
+
+                <input type="radio" name="crust" id="glutenFree">
+                <label for="glutenFree">Gluten Free</label>
+
+            </form>
+            <h2>Toppings</h2>
+            <form>
+                <h5>Meat: 1.50$</h5>
+                <input type="checkbox" name="toppings" id="meat-Pep" value="Pepperoni" data-prices="1.5">
+                <label for="meat-Pep">Pepperoni</label>
+
+                <input type="checkbox" name="toppings" id="meat-Sausage" value="Sausage" data-prices="1.5">
+                <label for="meat-Sausage">Sausage</label>
+
+                <input type="checkbox" name="toppings" id="meat-bacon" value="bacon" data-prices="1.5">
+                <label for="meat-bacon">Bacon</label>
+
+                <br>
+                <h5>Veggies: 1.00$</h5>
+
+                <input type="checkbox" name="toppings" id="veggie-onion" value="Onion" data-prices="1">
+                <label for="veggie-onion">Onion</label>
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-mushroom" value="Mushroom" data-prices="1">
+                <label for="veggie-mushroom">Mushrooms</label>
+
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-bOlives" value="Black Olives" data-prices="1">
+                <label for="veggie-bOlives">Black Olives</label>
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-tomatoes" value="Tomatoes" data-prices="1">
+                <label for="veggie-tomatoes">Tomatoes</label>
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-jalapeno" value="Jalapeno" data-prices="1">
+                <label for="veggie-jalapeno">Jalapeno</label>
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-pineapple" value="Pineapple"  data-prices="1">
+                <label for="veggie-pineapple">Pineapple</label>
+
+                <br>
+
+                <input type="checkbox" name="toppings" id="veggie-gOlives" value="Green Olives" data-prices="1">
+                <label for="veggie-gOlives"> Green Olives</label>
+
+                <br>
+
+
+
+            </form>
+
+
+        </div>
+    <div id="content2" class="tab-pane">
+        <h3>Personal Information</h3>
+        <form>
+
+            <label for="user-name">Name</label>
+            <input type ="text" name="personal-info" id="user-name" value="John Doe">
+
+            <label for="user-address">Address</label>
+            <input type ="text" name="personal-info" id="user-address" value="1234. S. North Ave, 56789, AA">
+
+            <label for="user-phone">Phone Number</label>
+            <input type ="text" name="personal-info" id="user-phone" value="xxx-xxxx">
+
+
+        </form>
+
+    </div>
+    <div id="content3" class="tab-pane">
+
+        <div class="order">
+            <h2>Order Summary</h2>
+            <h4>Pizza Details</h4>
+            <h4>Personal Information</h4>
+            <div id="name"></div>
+            <div id="addy"></div>
+            <div id="number"></div>
+            Subtotal <div id="subtotal"></div>
+            Total <div id="total"></div>
+        </div>
+        <form id="order">
+            <button>Order Pizza</button>
+        </form>
+
+    </div>
+
+</div>
+</div>
+<footer>
+    <p class="footer">Copy right of Jacob Perez</p>
+</footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="code.js"></script>
+</html>
