@@ -31,19 +31,20 @@
     <div class="tab-content">
         <div id="content1" class="tab-pane active">
             <h2>Pizza Size</h2>
+            <h5>(small $7, medium $9, large $12)</h5>
             <form>
-                <input type="radio" name="size" id="smallPizza" data-prices="7">
+                <input type="radio" name="size" id="smallPizza" data-prices="7" value="small pizza">
                 <label for="smallPizza">Small Pizza</label>
 
                 <br>
 
-                <input type="radio" name="size" id="medPizza" data-prices="9">
+                <input type="radio" name="size" id="medPizza" data-prices="9" value="medium pizza">
                 <label for="medPizza">Medium Pizza</label>
 
                 <br>
 
 
-                <input type="radio" name="size" id="larPizza" data-prices="12">
+                <input type="radio" name="size" id="larPizza" data-prices="12" value="large pizza">
                 <label for="larPizza">Large Pizza</label>
 
 
@@ -51,17 +52,17 @@
 
             <h2>Crust</h2>
             <form>
-                <input type="radio" name="crust" id="thin" >
+                <input type="radio" name="crust" id="thin" value="thin Crust">
                 <label for="thin">Thin Crust</label>
 
                 <br>
 
-                <input type="radio" name="crust" id="pan" >
+                <input type="radio" name="crust" id="pan" value="pan crust">
                 <label for="pan">Pan Crust</label>
 
                 <br>
 
-                <input type="radio" name="crust" id="glutenFree">
+                <input type="radio" name="crust" id="glutenFree" value="gulten free crust">
                 <label for="glutenFree">Gluten Free</label>
 
             </form>
@@ -74,7 +75,7 @@
                 <input type="checkbox" name="toppings" id="meat-Sausage" value="Sausage" data-prices="1.5">
                 <label for="meat-Sausage">Sausage</label>
 
-                <input type="checkbox" name="toppings" id="meat-bacon" value="bacon" data-prices="1.5">
+                <input type="checkbox" name="toppings" id="meat-bacon" value="Bacon" data-prices="1.5">
                 <label for="meat-bacon">Bacon</label>
 
                 <br>
@@ -144,10 +145,14 @@
         <div class="order">
             <h2>Order Summary</h2>
             <h4>Pizza Details</h4>
+            <div id="pizzaOrder"></div>
+            with toppings of:
+            <div id="topping"></div>
             <h4>Personal Information</h4>
             <div id="name"></div>
             <div id="addy"></div>
             <div id="number"></div>
+            <p>Delivery: 2.00$</p>
             Subtotal <div id="subtotal"></div>
             Total <div id="total"></div>
         </div>

@@ -11,7 +11,8 @@ function placeOrder(event)
 
     let checkedBoxes = $("input[name=toppings]:checked");
 
-    let radio = $("input[type=radio][name=size]:checked");
+
+    let radios = $("input[type=radio][name=size]:checked");
 
     let name = $("input#user-name").val();
 
@@ -21,24 +22,34 @@ function placeOrder(event)
 
     let total = 0;
 
+    let toppingOrder = "";
+
+
+
     checkedBoxes.each(function () {
 
+        let toppings = $(this).val();
+        toppingOrder = toppings + ", " + toppingOrder;
         total += $(this).data("prices");
 
     });
 
-    radio.each(function (){
-
+    radios.each(function (){
 
         total += $(this).data("prices");
 
     });
+    let size = $("input[type=radio][name=size]:checked").val();
+    let crust = $("input[type=radio][name=crust]:checked").val();
     let delivery = 2.00;
     let tax = total * 0.051;
     let subtotal = delivery + tax;
+
     total = total + subtotal;
     total = total.toFixed(2);
     subtotal = subtotal.toFixed(2);
+    $("div#topping").text(toppingOrder);
+    $("div#pizzaOrder").text(`You ordered a ${size} with ${crust}`);
     $("div#name").text(`Your name: ${name}`);
     $("div#addy").text(`Your Address: ${address}`);
     $("div#number").text(`Your Phone Number: ${phone}`);
